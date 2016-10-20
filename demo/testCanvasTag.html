@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<canvas id="drawing" width="500" height="500">haha</canvas>
+	<script>
+		var drawing = document.getElementById('drawing');
+		if (drawing.getContext) {
+			var context = drawing.getContext('2d');
+			context.lineWidth = 1;
+			// context.lineCap = 'round';
+			context.lineJoin = 'miter';
+			// 粉色矩形
+			context.strokeStyle = 'pink';
+			context.strokeRect(10, 20, 100, 100);
+			// 红色矩形
+			context.strokeStyle = '#ff0000';
+			context.strokeRect(10, 10, 50, 50);
+			// 挖空矩形
+			context.clearRect(8, 16, 10, 10);
+		}
+	</script>
+</body>
+</html>
