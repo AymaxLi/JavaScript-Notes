@@ -5,8 +5,11 @@
  *         OVERFLOW - RAM overflow
  *           
  */
-Status initBST(BSTree &T) {
+Status initBST(BSTree &T, RcdType e) {
 	T = (BSTree)malloc(sizeof(BSTNode));
+	T->data = e;
+	T->lchild = NULL;
+	T->rchild = NULL;
 	return T ? OK : OVERFLOW;
 }
 
@@ -33,7 +36,7 @@ Status destroyBST(BSTree &T) {
 Status insertBSTNode(BSTree &T, RcdType e) {
 	if(T == NULL) {
 		BSTree s;
-		s = (BSTree)malloc(sizeof(BSTNode));
+		s = (BSTNode*)malloc(sizeof(BSTNode));
 		if(s == NULL) return OVERFLOW;
 		s->data = e;
 		s->lchild = NULL;
@@ -108,4 +111,3 @@ Status deleteBSTNode(BSTree &T, KeyType key) {
 		return deleteBSTNode(T->rchild, key);
 	}
 }
-
