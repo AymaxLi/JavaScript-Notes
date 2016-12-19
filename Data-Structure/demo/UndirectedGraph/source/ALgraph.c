@@ -79,6 +79,12 @@ Status createGraph_AL(ALGraph &G, GraphKind kind, VexType *vexs, int n, ArcType 
 	}
 }
 
+/**
+ * search a vex in Graph
+ * @param  G    the Graph
+ * @param  name the name of vex
+ * @return      teh vex
+ */
 VexType searchVex_AL(ALGraph G, char *name) {
 	for (int i = 0; i < G.n; ++i) {
 		if (strcmp(G.vexsNodes[i].vex.name, name) == 0) {
@@ -86,3 +92,4 @@ VexType searchVex_AL(ALGraph G, char *name) {
 		}
 	}
 }
+

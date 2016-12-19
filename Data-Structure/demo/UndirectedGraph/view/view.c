@@ -5,6 +5,7 @@ void welcome() {
 }
 
 void searchVex(ALGraph G);
+void getRoad(ALGraph G);
 void operate(ALGraph &G) {
 	printf("%s\n", "--- --- --- --- ---");
 	printf("%s\n", "请输入以下操作码进行操作");
@@ -20,6 +21,9 @@ void operate(ALGraph &G) {
 			printf("%s\n", "--- 查询景点信息 ---");
 			searchVex(G);
 			break;
+		case 2 :
+			printf("%s\n", "--- 查询路径 ---");
+			getRoad(G);
 		default :
 			printf("%s\n", "请输入正确的操作码");
 			break;
@@ -34,4 +38,12 @@ void searchVex(ALGraph G) {
 	printf("--- %s ---\n",v.name);
 	printf("%s%d\n", "观赏等级：", v.level);
 	printf("%s%s\n", "简介：", v.introduce);
+}
+
+void getRoad(ALGraph G) {
+	printf("%s\n", "请输入要查找的景点名字");
+	char nameA[10];
+	char nameB[10];
+	while(scanf("%s", name) <= 0);
+	printf("%s\n", );
 }
