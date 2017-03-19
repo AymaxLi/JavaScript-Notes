@@ -7,3 +7,6 @@
 #define OK 1
 #define ERROR 0
 #define OVERFLOW -1 
+#define SELECTED 222
+#define UNSELECTED -222
+#define INFINITY 999

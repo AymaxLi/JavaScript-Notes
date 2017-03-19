@@ -16,7 +16,7 @@ typedef struct ArcType {
 } ArcType;
 
 typedef struct AdjVexNode {
-	// int vexsIndex;
+	int vexsIndex;
 	VexType vex;
 	ArcType arc;
 	AdjVexNode *nextArc; // next AdjVexNode
@@ -35,3 +35,8 @@ typedef struct {
 	GraphKind kind;
 	int *tags; // tagged array
 } ALGraph;
+
+typedef struct {
+	int prev; // the index of prev node
+	int lowcost; // 当前最短路径的长度
+} DistInfo;
