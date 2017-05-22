@@ -1,1 +1,1 @@
-all things what i have learned ~
+all things what i have learned ~~
